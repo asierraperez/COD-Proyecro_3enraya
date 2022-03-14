@@ -4,7 +4,7 @@ function main() {
     var resultado = ""
     var repetir = true
     var contador
-    var casillas = document.getElementsByClassName("casilla")
+    var casillas = document.getElementsByClassName("casillas")
     var contador = 0
     var tablero = Inicia_tablero(3, 3)
     for (let i = 0; i < casillas.length; i++) {
@@ -23,10 +23,10 @@ function main() {
             if (ganar) {
                 for (let j = 0; j < casillas.length; j++) {
                     casillas[j].removeEventListener("click", (evt))
-                    repetir = confirmar("volver a jugar")
-                    if (repetir) {
-                        location.reload()
-                    }
+                }
+                repetir = confirmar("volver a jugar")
+                if (repetir) {
+                    location.reload()
                 }
             }
         })
