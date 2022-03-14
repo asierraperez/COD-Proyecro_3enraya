@@ -6,31 +6,31 @@ function jugador2(tablero, posicion) {
     switch (posicion) {
         case 0:
             //i,j, nº de jugador
-            aux_jugar_tablero2 = comprobar_posicion(2, 0, 2, aux_jugar_tablero2)
+            aux_jugar_tablero2 = comprobar_posicion(2, 0, 2, aux_jugar_tablero2, posicion)
             break;
         case 1:
-            aux_jugar_tablero2 = comprobar_posicion(2, 1, 2, aux_jugar_tablero2)
+            aux_jugar_tablero2 = comprobar_posicion(2, 1, 2, aux_jugar_tablero2, posicion)
             break;
         case 2:
-            aux_jugar_tablero2 = comprobar_posicion(2, 2, 2, aux_jugar_tablero2)
+            aux_jugar_tablero2 = comprobar_posicion(2, 2, 2, aux_jugar_tablero2, posicion)
             break;
         case 3:
-            aux_jugar_tablero2 = comprobar_posicion(1, 0, 2, aux_jugar_tablero2)
+            aux_jugar_tablero2 = comprobar_posicion(1, 0, 2, aux_jugar_tablero2, posicion)
             break;
         case 4:
-            aux_jugar_tablero2 = comprobar_posicion(1, 1, 2, aux_jugar_tablero2)
+            aux_jugar_tablero2 = comprobar_posicion(1, 1, 2, aux_jugar_tablero2, posicion)
             break;
         case 5:
-            aux_jugar_tablero2 = comprobar_posicion(1, 2, 2, aux_jugar_tablero2)
+            aux_jugar_tablero2 = comprobar_posicion(1, 2, 2, aux_jugar_tablero2, posicion)
             break;
         case 6:
-            aux_jugar_tablero2 = comprobar_posicion(0, 0, 2, aux_jugar_tablero2)
+            aux_jugar_tablero2 = comprobar_posicion(0, 0, 2, aux_jugar_tablero2, posicion)
             break;
         case 7:
-            aux_jugar_tablero2 = comprobar_posicion(0, 1, 2, aux_jugar_tablero2)
+            aux_jugar_tablero2 = comprobar_posicion(0, 1, 2, aux_jugar_tablero2, posicion)
             break;
         case 8:
-            aux_jugar_tablero2 = comprobar_posicion(0, 2, 2, aux_jugar_tablero2)
+            aux_jugar_tablero2 = comprobar_posicion(0, 2, 2, aux_jugar_tablero2, posicion)
             break;
         default:
             alert("Jugador 2, numero no valido\nInténtalo de nuevo")
