@@ -4,25 +4,34 @@ function main() {
     var resultado = ""
     var repetir = true
     var contador
-    do {
-        var contador = 0
-        var tablero = Inicia_tablero(3, 3)
-        do {
-            tablero = jugador1(tablero)
-            contador++
-            ganar = comprobar_ganador(tablero, contador)
-            if (!ganar & (contador < 9)) {
-                tablero = jugador2(tablero)
-                contador++
-                ganar = comprobar_ganador(tablero, contador)
+    var casillas = document.getElementsByClassName("casilla")
+    var contador = 0
+    var tablero = Inicia_tablero(3, 3)
+    for (let i = 0; i < casillas.length; i++) {
+        casillas[i].addEventListener("click", (evt) => {
+            if (!ganar) {
+                if (contador % 2 == 0) {
+                    tablero = jugador1(tablero, i)
+                    contador++
+                    ganar = comprobar_ganador(tablero, contador)
+                } else {
+                    tablero = jugador2(tablero, i)
+                    contador++
+                    ganar = comprobar_ganador(tablero, contador)
+                }
             }
-        } while (!ganar & (contador < 9));
-        resultado = ver_tablero(tablero)
-        alert(resultado)
-        repetir = confirmar("volver a jugar")
-    } while (repetir);
+            if (ganar) {
+                for (let j = 0; j < casillas.length; j++) {
+                    casillas[j].removeEventListener("click", (evt))
+                    repetir = confirmar("volver a jugar")
+                    if (repetir) {
+                        location.reload()
+                    }
+                }
+            }
+        })
 
-
+    }
 
 }
 main()
