@@ -23,10 +23,10 @@ function main() {
             if (ganar) {
                 for (let j = 0; j < casillas.length; j++) {
                     casillas[j].removeEventListener("click", (evt))
-                    repetir = confirmar("volver a jugar")
-                    if (repetir) {
-                        location.reload()
-                    }
+                }
+                repetir = confirmar("volver a jugar")
+                if (repetir) {
+                    location.reload()
                 }
             }
         })
