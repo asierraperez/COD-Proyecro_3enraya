@@ -5,10 +5,14 @@ function comprobar_posicion(i, j, jugador, aux_tablero, posicion) {
         if (jugador == 1) {
             aux_comprobar_tablero[i][j] = "X"
             imagen.src = "svg/cruz.svg"
+            imagen.alt = "Jugador 1"
+
 
         } else {
             aux_comprobar_tablero[i][j] = "O"
             imagen.src = "svg/circulo.svg"
+            imagen.alt = "Jugador 2"
+
 
         }
 

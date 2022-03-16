@@ -2,7 +2,7 @@ function jugador1(tablero, posicion) {
     var aux_jugar_tablero1 = tablero
     //var tabla1 = ver_tablero(aux_jugar_tablero1)
     //var posicion = prompt(tabla1 + "\n\nJugador 1\nPulsa una tecla del pad numérico")
-    //posicion = parseInt(posicion)
+    posicion = parseInt(posicion)
     switch (posicion) {
         case 0:
             //i,j, nº de jugador
