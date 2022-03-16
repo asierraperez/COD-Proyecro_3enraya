@@ -74,3 +74,10 @@ border-left: none;
 div#tablero > div#d07,div#d08, div#d09 {
 border-bottom:none;
 }
+
+.casillas{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
