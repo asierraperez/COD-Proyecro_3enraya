@@ -65,14 +65,12 @@ h2 {
     border-left-style: none;
 }
 
-div#tablero > div#d03, div#d06, div#d09 {
-border-right: none;
+#tablero div:nth-child(7),#tablero div:nth-child(8),#tablero div:nth-child(9){
+    border-bottom-style: none;
 }
-div#tablero > div#d01{
-border-left: none;
-}
-div#tablero > div#d07,div#d08, div#d09 {
-border-bottom:none;
+
+#tablero div:nth-child(3),#tablero div:nth-child(6),#tablero div:nth-child(9){
+    border-right-style: none;
 }
 
 .casillas{
