@@ -2,7 +2,7 @@ function main() {
 
     var ganar = false
     var resultado = ""
-    var repetir = true
+    var repetir = document.getElementById("victoria")
     var contador
     var casillas = document.getElementsByClassName("casillas")
     var contador = 0
@@ -27,14 +27,15 @@ function main() {
                 for (let j = 0; j < casillas.length; j++) {
                     casillas[j].removeEventListener("click", (evt))
                 }
-                repetir = confirmar("volver a jugar")
-                if (repetir) {
-                    location.reload()
-                }
             }
         })
 
     }
+
+    repetir.addEventListener("click", (evt) => {
+        location.reload()
+    })
+
 
 }
 main()
