@@ -2,7 +2,7 @@ function main() {
 
     var ganar = false
     var tablero_lleno = false
-    var repetir = true
+    var repetir = document.getElementById("victoria")
     var contador
     var casillas = document.getElementsByClassName("casillas")
     var contador = 0
@@ -10,6 +10,9 @@ function main() {
     for (let i = 0; i < casillas.length; i++) {
         casillas[i].addEventListener("click", (evt) => {
             if (!ganar) {
+                if (document.getElementsByTagName("h2")[0].contains(document.getElementById("ocupado"))) {
+                    document.getElementsByTagName("h2")[0].removeChild(document.getElementById("ocupado"))
+                }
                 if (contador % 2 == 0) {
                     tablero = jugador1(tablero, i)
                     contador++
@@ -26,14 +29,15 @@ function main() {
                 for (let j = 0; j < casillas.length; j++) {
                     casillas[j].removeEventListener("click", (evt))
                 }
-                repetir = confirmar("volver a jugar")
-                if (repetir) {
-                    location.reload()
-                }
             }
         })
 
     }
+
+    repetir.addEventListener("click", (evt) => {
+        location.reload()
+    })
+
 
 }
 main()

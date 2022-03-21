@@ -166,6 +166,10 @@ function mostrarSvgVictoria(jugador) {
         img.src = "svg/victoria_jugador2.svg"
     }
     var victoria = document.getElementById("victoria");
+
+    img.style.width = "100%"
+    img.style.height = "8em"
+
     victoria.appendChild(img);
 
 }
