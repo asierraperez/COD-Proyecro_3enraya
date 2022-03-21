@@ -20,7 +20,19 @@ function comprobar_posicion(i, j, jugador, aux_tablero, posicion) {
 
 
     } else {
-        alert("Jugador " + jugador + "\nPosicion ocupada, intentalo de nuevo")
+        var ocupado = document.createElement("div")
+        if (jugador == 1) {
+            ocupado.innerHTML = "Jugador " + jugador + "<br/>Posicion ocupada,<br/>El turno pasa al jugador " + (jugador + 1)
+            ocupado.style.color = "dodgerblue"
+        } else {
+            ocupado.innerHTML = "Jugador " + jugador + "<br/>Posicion ocupada,<br/>El turno pasa al jugador " + (jugador - 1)
+            ocupado.style.color = "coral"
+        }
+
+        ocupado.style.fontSize = "0.75em"
+        document.getElementsByTagName("h2")[0].appendChild(ocupado)
+        ocupado.id = "ocupado"
+        //alert("Jugador " + jugador + "\nPosicion ocupada, intentalo de nuevo")
     }
     return aux_comprobar_tablero
 }

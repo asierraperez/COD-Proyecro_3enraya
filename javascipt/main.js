@@ -10,6 +10,9 @@ function main() {
     for (let i = 0; i < casillas.length; i++) {
         casillas[i].addEventListener("click", (evt) => {
             if (!ganar) {
+                if (document.getElementsByTagName("h2")[0].contains(document.getElementById("ocupado"))) {
+                    document.getElementsByTagName("h2")[0].removeChild(document.getElementById("ocupado"))
+                }
                 if (contador % 2 == 0) {
                     tablero = jugador1(tablero, i)
                     contador++
