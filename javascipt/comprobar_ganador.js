@@ -1,4 +1,4 @@
-function comprobar_ganador(tablero, turnos) {
+function comprobar_ganador(tablero, lleno) {
     var aux_comp_ganador = tablero
     var aux_ganar = false
     for (let i = 0; i < aux_comp_ganador.length; i++) {
@@ -151,7 +151,7 @@ function comprobar_ganador(tablero, turnos) {
             }
         }
     }
-    if (!aux_ganar & (turnos == 9)) {
+    if (!aux_ganar & lleno) {
         alert("La partida termina en tablas")
         aux_ganar = true
     }

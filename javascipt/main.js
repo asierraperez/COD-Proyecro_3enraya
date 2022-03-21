@@ -1,7 +1,7 @@
 function main() {
 
     var ganar = false
-    var resultado = ""
+    var tablero_lleno = false
     var repetir = true
     var contador
     var casillas = document.getElementsByClassName("casillas")
@@ -13,11 +13,13 @@ function main() {
                 if (contador % 2 == 0) {
                     tablero = jugador1(tablero, i)
                     contador++
-                    ganar = comprobar_ganador(tablero, contador)
+                    tablero_lleno = estado_tablero(tablero)
+                    ganar = comprobar_ganador(tablero, tablero_lleno)
                 } else {
                     tablero = jugador2(tablero, i)
                     contador++
-                    ganar = comprobar_ganador(tablero, contador)
+                    tablero_lleno = estado_tablero(tablero)
+                    ganar = comprobar_ganador(tablero, tablero_lleno)
                 }
             }
             if (ganar) {
